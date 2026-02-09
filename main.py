@@ -11,15 +11,15 @@ def account_creation(e):
     password_length = len(password)
 
     # Username and Password Restrictions
-    if username_length < 7 and password_length < 10: # if the information typed out isn't valid/long enough
+    if username_length < 7 and password_length < 10: # Checks if the information isn't valid/long enough
         display(f'Invalid output.', target='output')
-    elif username_length < 7: # if the username is too short
+    elif username_length < 7: # Checks if the username length requirement is too short
         display(f'Your username is too short. Try again.', target='output')
-    elif password_length < 7: # if the password is too short
+    elif password_length < 10: # Checks if the password length requirement is too short
         display(f'Your password is too short. Try again.', target='output')
-    elif password.isalpha(): # if the letters aren't sufficient
-        display(f'Add some letters to your password. Try again.', target='output')
-    elif password.isdigit(): # if the numbers aren't sufficient
-        display(f'Add some numbers to your password. Try again.', target='output')
-    else: # if the information is fulfilled properly
+    elif password.isalpha(): # Checks if the required letters aren't sufficient
+        display(f'Password must contain at least one letter. Try again.', target='output')
+    elif password.isdigit(): # Checks if the required numbers aren't sufficient
+        display(f'Password must contain at least one number. Try again.', target='output')
+    else: # If all conditions are satisfied
         display(f'Welcome, {username}!', target='output')
