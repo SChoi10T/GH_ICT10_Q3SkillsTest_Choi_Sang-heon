@@ -11,7 +11,7 @@ def account_creation(e):
     password_length = len(password)
 
     # Username and Password Restrictions
-    if username_length < 7 and password_length < 10: # if the information typed out aren't valid/long enough
+    if username_length < 7 and password_length < 10: # if the information typed out isn't valid/long enough
         display(f'Invalid output.', target='output')
     elif username_length < 7: # if the username is too short
         display(f'Your username is too short. Try again.', target='output')
